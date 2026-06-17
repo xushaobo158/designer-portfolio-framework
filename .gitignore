@@ -1,0 +1,9 @@
+node_modules
+dist
+.vite
+*.local
+.vite-*.log
+.docx-preview*
+.tools/
+.cloudflared-*.log
+.vite-preview-*.log

@@ -1,0 +1,21 @@
+.grainient-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #17191f, #2b303d 48%, #12151c);
+}
+
+.grainient-container.is-fallback {
+  background-size: 180% 180%;
+  animation: grainient-fallback 18s ease-in-out infinite;
+}
+
+@keyframes grainient-fallback {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grainient-container.is-fallback { animation: none; }
+}

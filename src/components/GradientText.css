@@ -1,0 +1,66 @@
+.animated-gradient-text {
+  position: relative;
+  display: inline-flex;
+  max-width: fit-content;
+  align-items: center;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.animated-gradient-text.has-gradient-border {
+  padding: 0.08em 0.18em;
+  border-radius: 0.18em;
+  backdrop-filter: blur(10px);
+}
+
+.gradient-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background-image: linear-gradient(90deg, var(--gradient-colors));
+  background-size: 300% 100%;
+  animation: gradient-text-flow var(--gradient-speed) linear infinite;
+  animation-play-state: paused;
+  pointer-events: none;
+}
+
+.gradient-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: var(--ink);
+}
+
+.gradient-text-content {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  color: transparent;
+  background-image: linear-gradient(90deg, var(--gradient-colors));
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: gradient-text-flow var(--gradient-speed) linear infinite;
+  animation-play-state: paused;
+}
+
+.animated-gradient-text.is-gradient-visible .gradient-overlay,
+.animated-gradient-text.is-gradient-visible .gradient-text-content {
+  animation-play-state: running;
+}
+
+@keyframes gradient-text-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradient-overlay,
+  .gradient-text-content {
+    animation: none;
+    background-position: 50% 50%;
+  }
+}
