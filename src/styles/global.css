@@ -89,7 +89,9 @@ button { color: inherit; }
 
 .hero { --hero-mx: 0; --hero-my: 0; position: relative; min-height: 100svh; padding: clamp(96px, 10.5svh, 120px) max(5.6vw, 32px) clamp(38px, 5.4svh, 62px); display: grid; grid-template-columns: 1fr; place-items: center; overflow: hidden; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 50% 32%, rgba(110,168,255,.08), transparent 36%), radial-gradient(circle at 50% 75%, rgba(117,233,227,.045), transparent 38%), linear-gradient(180deg, rgba(9,12,19,.5), rgba(7,9,14,.2)); }
 .hero::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 50% 48%, transparent 0 48%, rgba(7,9,14,.5) 86%), linear-gradient(90deg, rgba(7,9,14,.78), transparent 28%, transparent 72%, rgba(7,9,14,.78)); }
-.hero-grid, .contact-grid { position: absolute; inset: 0; opacity: .28; background-image: linear-gradient(rgba(174,194,228,.052) 1px, transparent 1px), linear-gradient(90deg, rgba(174,194,228,.052) 1px, transparent 1px); background-size: 64px 64px; mask-image: linear-gradient(to bottom, transparent, #000 24%, #000 76%, transparent); }
+.hero-grid, .contact-grid { position: absolute; inset: 0; opacity: .28; background-size: 64px 64px; mask-image: linear-gradient(to bottom, transparent, #000 24%, #000 76%, transparent); }
+.hero-grid { background-image: linear-gradient(90deg, rgba(174,194,228,.052) 1px, transparent 1px); }
+.contact-grid { background-image: linear-gradient(rgba(174,194,228,.052) 1px, transparent 1px), linear-gradient(90deg, rgba(174,194,228,.052) 1px, transparent 1px); }
 .hero-grid::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,9,14,.9) 0%, transparent 32%, transparent 68%, rgba(7,9,14,.9) 100%); }
 .hero-glow { position: absolute; border-radius: 50%; filter: blur(70px); opacity: .04; pointer-events: none; }
 .hero-glow-one { width: 820px; height: 820px; right: -4%; top: 5%; background: #617493; }
