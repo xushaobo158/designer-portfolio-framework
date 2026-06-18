@@ -131,7 +131,7 @@ button { color: inherit; }
 .hero-role-rail span { padding: 7px 10px; border: 1px solid rgba(174,207,255,.15); background: linear-gradient(135deg, rgba(174,207,255,.08), rgba(117,233,227,.035)); color: #8291a6; font: 400 8px var(--mono); letter-spacing: .13em; text-transform: uppercase; }
 .hero-poster-stage { position: relative; min-height: clamp(220px, 30svh, 320px); margin-top: clamp(42px, 6.8svh, 70px); display: grid; place-items: center; isolation: isolate; text-align: center; }
 .hero-poster-stage::before { content: ''; position: absolute; left: 50%; top: 50%; width: min(86vw, 980px); height: 54%; transform: translate(-50%, -50%); border-radius: 999px; background: radial-gradient(ellipse at center, rgba(105,205,255,.12), rgba(158,140,255,.055) 42%, transparent 72%); filter: blur(18px); opacity: .78; }
-.hero-poster-stage::after { content: ''; position: absolute; left: 50%; top: 52%; width: min(82vw, 980px); height: 1px; transform: translateX(-50%); background: linear-gradient(90deg, transparent, rgba(105,205,255,.72), rgba(255,255,255,.42), rgba(158,140,255,.36), transparent); box-shadow: 0 0 28px rgba(105,205,255,.18); animation: philosophyScan 4.8s cubic-bezier(.2,.8,.2,1) infinite; }
+.hero-poster-stage::after { content: none; }
 .hero h1 { margin: 0; font: 650 clamp(56px, 5.8vw, 96px)/.92 var(--display); letter-spacing: -.066em; }
 .hero h1.hero-philosophy { position: relative; z-index: 2; width: max-content; max-width: 100%; margin: 0 auto; text-align: center; font: 650 clamp(32px, 4.2vw, 64px)/1.1 var(--display); letter-spacing: -.07em; white-space: nowrap; }
 .language-en .hero h1.hero-philosophy { font-size: clamp(24px, 3vw, 42px); letter-spacing: -.058em; }
